@@ -51,14 +51,18 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
             
             {{-- Left: Monumental Headline (8 Cols) --}}
-            <div class="lg:col-span-8 space-y-6">
-                <div data-reveal class="inline-block">
-                    <span class="text-[10px] uppercase tracking-[0.3em] text-brand-gold-dark font-semibold px-3 py-1 rounded-full bg-brand-parchment border border-brand-gold/30">
-                        Institutional Governance &bull; Leadership Architecture
+            <div class="lg:col-span-8 space-y-6 sm:space-y-8">
+                <div data-reveal class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                    <span class="inline-flex items-center text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.28em] text-brand-gold-dark font-semibold px-3.5 py-1.5 rounded-full bg-brand-parchment border border-brand-gold/30 shadow-xs">
+                        Institutional Governance
+                    </span>
+                    <span class="hidden sm:inline-block w-1 h-1 rounded-full bg-brand-gold/50" aria-hidden="true"></span>
+                    <span class="inline-flex items-center text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.28em] text-brand-gold-dark font-semibold px-3.5 py-1.5 rounded-full bg-brand-parchment border border-brand-gold/30 shadow-xs">
+                        Leadership Architecture
                     </span>
                 </div>
 
-                <h1 data-reveal data-delay="0.08" class="font-serif font-light tracking-tight text-brand-navy leading-[0.92]" style="font-size: clamp(3.6rem, 9.5vw, 9.5rem);">
+                <h1 data-reveal data-delay="0.08" class="font-serif font-light tracking-tight text-brand-navy leading-[0.95] sm:leading-[0.92]" style="font-size: clamp(3.2rem, 9.5vw, 9.5rem);">
                     Building<br>
                     institutions<br>
                     <em class="text-brand-gold not-italic italic font-serif">that endure.</em>
