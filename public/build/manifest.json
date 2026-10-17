@@ -59,6 +59,14 @@
     "file": "assets/newsreader-latin-600-normal-30OJ_TG_.woff2",
     "src": "node_modules/@fontsource/newsreader/files/newsreader-latin-600-normal.woff2"
   },
+  "node_modules/@fontsource/newsreader/files/newsreader-latin-700-normal.woff": {
+    "file": "assets/newsreader-latin-700-normal-CluIqIw6.woff",
+    "src": "node_modules/@fontsource/newsreader/files/newsreader-latin-700-normal.woff"
+  },
+  "node_modules/@fontsource/newsreader/files/newsreader-latin-700-normal.woff2": {
+    "file": "assets/newsreader-latin-700-normal-rIgV_oaK.woff2",
+    "src": "node_modules/@fontsource/newsreader/files/newsreader-latin-700-normal.woff2"
+  },
   "node_modules/@fontsource/newsreader/files/newsreader-latin-ext-400-italic.woff": {
     "file": "assets/newsreader-latin-ext-400-italic-qdgKLcPG.woff",
     "src": "node_modules/@fontsource/newsreader/files/newsreader-latin-ext-400-italic.woff"
@@ -91,6 +99,14 @@
     "file": "assets/newsreader-latin-ext-600-normal-BXv5iMHi.woff2",
     "src": "node_modules/@fontsource/newsreader/files/newsreader-latin-ext-600-normal.woff2"
   },
+  "node_modules/@fontsource/newsreader/files/newsreader-latin-ext-700-normal.woff": {
+    "file": "assets/newsreader-latin-ext-700-normal-79d_He5Z.woff",
+    "src": "node_modules/@fontsource/newsreader/files/newsreader-latin-ext-700-normal.woff"
+  },
+  "node_modules/@fontsource/newsreader/files/newsreader-latin-ext-700-normal.woff2": {
+    "file": "assets/newsreader-latin-ext-700-normal-Ougc6Dr0.woff2",
+    "src": "node_modules/@fontsource/newsreader/files/newsreader-latin-ext-700-normal.woff2"
+  },
   "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-400-italic.woff": {
     "file": "assets/newsreader-vietnamese-400-italic-QbB8kb5s.woff",
     "src": "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-400-italic.woff"
@@ -122,6 +138,14 @@
   "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-600-normal.woff2": {
     "file": "assets/newsreader-vietnamese-600-normal-CaH84vfx.woff2",
     "src": "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-600-normal.woff2"
+  },
+  "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-700-normal.woff": {
+    "file": "assets/newsreader-vietnamese-700-normal-DtcFBl0j.woff",
+    "src": "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-700-normal.woff"
+  },
+  "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-700-normal.woff2": {
+    "file": "assets/newsreader-vietnamese-700-normal-DuQcgozP.woff2",
+    "src": "node_modules/@fontsource/newsreader/files/newsreader-vietnamese-700-normal.woff2"
   },
   "node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-300-normal.woff": {
     "file": "assets/plus-jakarta-sans-cyrillic-ext-300-normal-tvLKFssf.woff",
@@ -284,7 +308,7 @@
     "src": "node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-700-normal.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-D41gd1qP.css",
+    "file": "assets/app-VyCUFprI.css",
     "name": "app",
     "names": [
       "app.css"
@@ -316,6 +340,12 @@
       "assets/newsreader-latin-ext-600-italic-BlyxMIaP.woff",
       "assets/newsreader-latin-600-italic-BXGU4hd9.woff2",
       "assets/newsreader-latin-600-italic-QBRrDGPr.woff",
+      "assets/newsreader-vietnamese-700-normal-DuQcgozP.woff2",
+      "assets/newsreader-vietnamese-700-normal-DtcFBl0j.woff",
+      "assets/newsreader-latin-ext-700-normal-Ougc6Dr0.woff2",
+      "assets/newsreader-latin-ext-700-normal-79d_He5Z.woff",
+      "assets/newsreader-latin-700-normal-rIgV_oaK.woff2",
+      "assets/newsreader-latin-700-normal-CluIqIw6.woff",
       "assets/plus-jakarta-sans-cyrillic-ext-300-normal-CSFVcV2s.woff2",
       "assets/plus-jakarta-sans-cyrillic-ext-300-normal-tvLKFssf.woff",
       "assets/plus-jakarta-sans-vietnamese-300-normal-FNv3s1Fp.woff2",
@@ -359,7 +389,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-DHuQxNLq.js",
+    "file": "assets/app-CFciKdxS.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true

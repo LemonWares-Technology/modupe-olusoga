@@ -8,10 +8,11 @@ export function initNav() {
     if (header) {
         const updateHeader = () => {
             if (window.scrollY > 20) {
-                header.classList.add('is-scrolled', 'bg-brand-cream/95', 'backdrop-blur-md', 'shadow-xs', 'border-b', 'border-brand-stone/60');
+                // Single bottom border only — no blur/shadow noise
+                header.classList.add('is-scrolled', 'bg-brand-cream', 'border-b', 'border-brand-stone/50');
                 header.classList.remove('bg-transparent');
             } else {
-                header.classList.remove('is-scrolled', 'bg-brand-cream/95', 'backdrop-blur-md', 'shadow-xs', 'border-b', 'border-brand-stone/60');
+                header.classList.remove('is-scrolled', 'bg-brand-cream', 'border-b', 'border-brand-stone/50');
                 header.classList.add('bg-transparent');
             }
         };

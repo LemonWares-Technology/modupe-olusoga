@@ -4,141 +4,164 @@
 @section('meta_description', 'Institutional leadership roles, social impact initiatives, and professional platforms: Streamsowers & Köhn, ALAN, The Strides Platform, and Project CHAM.')
 
 @section('content')
-    <!-- Impact Hero -->
-    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-brand-stone/70 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div data-reveal-hero class="flex justify-center">
-                <x-eyebrow>Stewardship &bull; Institutional Ecosystem</x-eyebrow>
-            </div>
-            <h1 data-reveal-hero class="font-serif text-4xl sm:text-6xl text-brand-navy font-normal leading-[1.12]">
-                Leadership, Institutions &amp; Social Impact
+
+{{-- ============================================================
+     HERO — left-aligned, no centre-stacking
+     ============================================================ --}}
+<section class="pt-32 pb-16 sm:pb-20 border-b border-brand-stone/60 bg-brand-cream">
+    <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <div class="max-w-3xl">
+            <span class="gold-rule"></span>
+            <p class="section-label text-brand-gold-dark mb-4" data-reveal-hero>Stewardship &bull; Institutional Ecosystem</p>
+            <h1
+                class="font-serif font-bold text-brand-navy leading-[1.02] tracking-tight mb-6"
+                style="font-size: clamp(2.6rem, 6vw, 5.5rem);"
+                data-hero-heading
+            >
+                Leadership,<br>Institutions &amp;<br>Social Impact
             </h1>
-            <p data-reveal-hero class="text-base sm:text-lg text-brand-charcoal/80 font-light max-w-2xl mx-auto leading-relaxed">
+            <p class="text-base text-brand-charcoal leading-[1.8] max-w-xl" data-reveal-hero>
                 Evidence of institutional stewardship and deliberate community commitment across commercial, industry, and humanitarian platforms.
             </p>
         </div>
-    </section>
 
-    <!-- Main Institutions Grid -->
-    <section class="py-24 bg-brand-cream border-b border-brand-stone/70">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16" data-stagger-group>
-            
-            <!-- 1. Streamsowers & Köhn -->
-            <div data-stagger-item id="streamsowers" class="p-8 sm:p-12 rounded bg-white border border-brand-stone/80 shadow-sm space-y-6">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-stone/80 pb-6">
-                    <div>
-                        <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold block">Commercial Practice &bull; Operational Leadership</span>
-                        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-brand-navy mt-1">
-                            Streamsowers &amp; Köhn
-                        </h2>
-                    </div>
-                    <span class="inline-block px-3.5 py-1.5 rounded bg-brand-navy text-white text-[11px] font-semibold tracking-wider uppercase self-start sm:self-auto">
-                        Chief Operating Officer
-                    </span>
-                </div>
+    </div>
+</section>
 
-                <div class="space-y-4 text-xs sm:text-sm text-brand-charcoal/80 font-light leading-relaxed">
-                    <p>
-                        Streamsowers &amp; Köhn is an established commercial law firm in Nigeria with a distinguished record across major corporate transactions, dispute resolution, energy, and corporate governance advisory.
-                    </p>
-                    <p>
-                        Serving as Chief Operating Officer, Modupe Olusoga collaborates with the Managing Partner and Practice Group leaders to formulate firmwide strategy, modernize operational frameworks, and drive administrative infrastructure that enables lawyers, clients, and sustainable commercial longevity.
-                    </p>
-                </div>
+{{-- ============================================================
+     INSTITUTION LEDGER — editorial row layout, not card stacks
+     ============================================================ --}}
+<section class="py-16 sm:py-24 bg-brand-cream border-b border-brand-stone/60">
+    <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
 
-                <div class="pt-4 border-t border-brand-stone/60 flex items-center justify-between text-xs">
-                    <span class="text-brand-muted font-light">Commercial Legal Practice &bull; Lagos, Nigeria</span>
-                    <a href="https://sskohn.com" target="_blank" rel="noopener noreferrer" class="font-semibold uppercase tracking-wider text-brand-navy hover:text-brand-gold-dark transition-colors flex items-center gap-1.5">
-                        <span>Visit Firm Website</span> &rarr;
-                    </a>
-                </div>
+        @php
+        $institutions = [
+            [
+                'index'    => '01',
+                'category' => 'Commercial Practice',
+                'name'     => 'Streamsowers & Köhn',
+                'role'     => 'Chief Operating Officer',
+                'badge_class' => 'bg-brand-navy text-white',
+                'body'     => [
+                    'Streamsowers & Köhn is an established commercial law firm in Nigeria with a distinguished record across major corporate transactions, dispute resolution, energy, and corporate governance advisory.',
+                    'Serving as Chief Operating Officer, Modupe Olusoga collaborates with the Managing Partner and Practice Group leaders to formulate firmwide strategy, modernize operational frameworks, and drive administrative infrastructure that enables lawyers, clients, and sustainable commercial longevity.',
+                ],
+                'meta'  => 'Commercial Legal Practice &bull; Lagos, Nigeria',
+                'link'  => ['href' => 'https://sskohn.com', 'label' => 'Visit Firm Website', 'external' => true],
+            ],
+            [
+                'index'    => '02',
+                'category' => 'Industry Governance',
+                'name'     => 'Association of Law Firm Administrators Nigeria (ALAN)',
+                'role'     => 'President &mdash; 2026–2029 Term',
+                'badge_class' => 'bg-brand-gold text-brand-navy',
+                'body'     => [
+                    'The Association of Law Firm Administrators Nigeria (ALAN) is the national professional body advancing education, certification, and standard-setting for business managers and administrative executives within Nigeria\'s legal sector.',
+                    'As President for the 2026–2029 term, Modupe leads the national executive council in implementing programs to professionalize law firm management, establish operations benchmarking, and advance the strategic standing of administrators in law firm longevity.',
+                ],
+                'meta'  => 'National Professional Body &bull; Legal Sector Stewardship',
+                'link'  => ['href' => 'https://alanigeria.org', 'label' => 'Visit ALAN Website', 'external' => true],
+            ],
+            [
+                'index'    => '03',
+                'category' => 'Leadership Development',
+                'name'     => 'The Strides Platform',
+                'role'     => 'Founder',
+                'badge_class' => 'border border-brand-stone text-brand-charcoal',
+                'body'     => [
+                    'The Strides Platform is a focused leadership and personal development initiative established to equip emerging executives and professionals with the mental discipline, practical tools, and accountability structures required to achieve meaningful career milestones.',
+                ],
+                'meta'  => 'Leadership Development &bull; Mentorship Community',
+                'link'  => ['href' => '/mentorship', 'label' => 'Explore Programmes', 'external' => false],
+            ],
+            [
+                'index'    => '04',
+                'category' => 'Humanitarian',
+                'name'     => 'Project CHAM',
+                'role'     => 'Advocacy &bull; Health',
+                'badge_class' => 'bg-red-50 text-red-900 border border-red-200',
+                'body'     => [
+                    'Project CHAM is a dedicated philanthropic initiative advocating for and supporting children navigating pediatric health crises, particularly childhood cancer awareness, early diagnosis education, and family support resources in Nigeria.',
+                ],
+                'meta'  => 'Childhood Health Advocacy &bull; Philanthropy',
+                'link'  => null,
+            ],
+        ];
+        @endphp
+
+        @foreach($institutions as $inst)
+        <div
+            class="editorial-row group py-10 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start"
+            id="{{ strtolower(preg_replace('/[^a-z0-9]+/i', '-', $inst['name'])) }}"
+            data-reveal
+        >
+            {{-- Index + category --}}
+            <div class="lg:col-span-2 pt-1 flex lg:flex-col gap-4 lg:gap-2 items-center lg:items-start">
+                <span class="font-serif text-3xl font-bold text-brand-stone/40 leading-none select-none shrink-0">{{ $inst['index'] }}</span>
+                <p class="section-label text-brand-gold-dark hidden lg:block mt-2">{{ $inst['category'] }}</p>
             </div>
 
-            <!-- 2. ALAN -->
-            <div data-stagger-item id="alan" class="p-8 sm:p-12 rounded bg-white border border-brand-stone/80 shadow-sm space-y-6">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-stone/80 pb-6">
-                    <div>
-                        <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold block">Industry Professionalisation &bull; Governance</span>
-                        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-brand-navy mt-1">
-                            Association of Law Firm Administrators Nigeria (ALAN)
-                        </h2>
-                    </div>
-                    <span class="inline-block px-3.5 py-1.5 rounded bg-brand-gold text-brand-navy text-[11px] font-bold tracking-wider uppercase self-start sm:self-auto">
-                        President &bull; 2026–2029 Term
-                    </span>
-                </div>
-
-                <div class="space-y-4 text-xs sm:text-sm text-brand-charcoal/80 font-light leading-relaxed">
-                    <p>
-                        The Association of Law Firm Administrators Nigeria (ALAN) is the national professional body advancing education, certification, and standard-setting for business managers and administrative executives within Nigeria's legal sector.
-                    </p>
-                    <p>
-                        As President for the 2026–2029 term, Modupe leads the national executive council in implementing programs to professionalize law firm management, establish operations benchmarking, and advance the strategic standing of administrators in law firm longevity.
-                    </p>
-                </div>
-
-                <div class="pt-4 border-t border-brand-stone/60 flex items-center justify-between text-xs">
-                    <span class="text-brand-muted font-light">National Professional Body &bull; Legal Sector Stewardship</span>
-                    <a href="https://alanigeria.org" target="_blank" rel="noopener noreferrer" class="font-semibold uppercase tracking-wider text-brand-navy hover:text-brand-gold-dark transition-colors flex items-center gap-1.5">
-                        <span>Visit ALAN Website</span> &rarr;
-                    </a>
-                </div>
+            {{-- Role + name --}}
+            <div class="lg:col-span-4">
+                <p class="section-label text-brand-muted mb-2">{{ $inst['category'] }}</p>
+                <h2 class="font-serif text-xl sm:text-2xl font-bold text-brand-navy leading-snug mb-3">
+                    {{ $inst['name'] }}
+                </h2>
+                <span class="inline-block text-xs font-semibold tracking-wide px-3 py-1.5 {{ $inst['badge_class'] }}" style="border-radius:2px;">
+                    {!! $inst['role'] !!}
+                </span>
             </div>
 
-            <!-- 3. The Strides Platform -->
-            <div data-stagger-item id="strides" class="p-8 sm:p-12 rounded bg-white border border-brand-stone/80 shadow-sm space-y-6">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-stone/80 pb-6">
-                    <div>
-                        <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold block">Personal &bull; Professional Growth</span>
-                        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-brand-navy mt-1">
-                            The Strides Platform
-                        </h2>
-                    </div>
-                    <span class="inline-block px-3.5 py-1.5 rounded bg-brand-cream border border-brand-stone text-brand-charcoal text-[11px] font-semibold tracking-wider uppercase self-start sm:self-auto">
-                        Founder &bull; Initiative
-                    </span>
-                </div>
+            {{-- Description + link --}}
+            <div class="lg:col-span-6 space-y-4">
+                @foreach($inst['body'] as $para)
+                    <p class="text-base text-brand-charcoal leading-[1.8]">{{ $para }}</p>
+                @endforeach
 
-                <div class="space-y-4 text-xs sm:text-sm text-brand-charcoal/80 font-light leading-relaxed">
-                    <p>
-                        The Strides Platform is a focused leadership and personal development initiative established to equip emerging executives and professionals with the mental discipline, practical tools, and accountability structures required to achieve meaningful career milestones.
-                    </p>
-                </div>
-
-                <div class="pt-4 border-t border-brand-stone/60 flex items-center justify-between text-xs">
-                    <span class="text-brand-muted font-light">Leadership Development &bull; Mentorship Community</span>
-                    <a href="{{ route('mentorship') }}" class="font-semibold uppercase tracking-wider text-brand-navy hover:text-brand-gold-dark transition-colors flex items-center gap-1.5">
-                        <span>Explore Programmes</span> &rarr;
-                    </a>
-                </div>
-            </div>
-
-            <!-- 4. Project CHAM -->
-            <div data-stagger-item id="cham" class="p-8 sm:p-12 rounded bg-white border border-brand-stone/80 shadow-sm space-y-6">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-stone/80 pb-6">
-                    <div>
-                        <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold block">Humanitarian &bull; Social Responsibility</span>
-                        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-brand-navy mt-1">
-                            Project CHAM
-                        </h2>
-                    </div>
-                    <span class="inline-block px-3.5 py-1.5 rounded bg-red-900/10 text-red-900 text-[11px] font-semibold tracking-wider uppercase self-start sm:self-auto">
-                        Advocacy &bull; Health
-                    </span>
-                </div>
-
-                <div class="space-y-4 text-xs sm:text-sm text-brand-charcoal/80 font-light leading-relaxed">
-                    <p>
-                        Project CHAM is a dedicated philanthropic initiative advocating for and supporting children navigating pediatric health crises, particularly childhood cancer awareness, early diagnosis education, and family support resources in Nigeria.
-                    </p>
-                </div>
-
-                <div class="pt-4 border-t border-brand-stone/60 flex items-center justify-between text-xs">
-                    <span class="text-brand-muted font-light">Childhood Health Advocacy &bull; Philanthropy</span>
-                    <span class="text-brand-muted italic">Community Partnership</span>
+                <div class="pt-3 flex items-center justify-between border-t border-brand-stone/40">
+                    <span class="text-xs text-brand-muted">{!! $inst['meta'] !!}</span>
+                    @if($inst['link'])
+                        <a
+                            href="{{ $inst['link']['href'] }}"
+                            @if($inst['link']['external']) target="_blank" rel="noopener noreferrer" @endif
+                            class="editorial-link text-xs font-semibold text-brand-navy hover:text-brand-gold-dark transition-colors uppercase tracking-wider"
+                        >
+                            {{ $inst['link']['label'] }} &rarr;
+                        </a>
+                    @endif
                 </div>
             </div>
 
         </div>
-    </section>
+        @endforeach
+
+    </div>
+</section>
+
+{{-- ============================================================
+     CLOSING CTA — dark strip
+     ============================================================ --}}
+<section class="py-16 sm:py-24 bg-brand-navy" data-reveal>
+    <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-8">
+            <div class="max-w-xl">
+                <span class="gold-rule"></span>
+                <p class="font-serif font-bold text-white text-2xl sm:text-3xl leading-snug">
+                    Explore the mentorship programme or invite Modupe to speak at your next convening.
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-3 shrink-0">
+                <a href="{{ route('mentorship') }}#apply" class="btn-base btn-gold">
+                    <span>Apply for Mentorship</span>
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="{{ route('speaking') }}#enquiry" class="btn-base btn-outline-light">
+                    <span>Speaking Enquiry</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection
