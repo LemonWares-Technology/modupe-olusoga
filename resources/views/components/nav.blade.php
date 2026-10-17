@@ -53,7 +53,7 @@
 {{-- Full-screen overlay menu with safe-area support and scroll container --}}
 <div
     id="nav-overlay"
-    class="fixed inset-0 z-[60] bg-brand-navy overflow-y-auto opacity-0 pointer-events-none transition-opacity duration-300"
+    class="fixed inset-0 z-[60] bg-brand-navy overflow-y-auto no-scrollbar opacity-0 pointer-events-none transition-opacity duration-300"
     aria-hidden="true"
 >
     <div class="min-h-full flex flex-col justify-between p-5 sm:p-10 lg:p-14 pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]">

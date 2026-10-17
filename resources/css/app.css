@@ -62,6 +62,43 @@ body {
     color: #ffffff;
 }
 
+/* ─── Custom Editorial Scrollbar ──────────────────────────────────────── */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(197, 160, 89, 0.45) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(197, 160, 89, 0.35);
+    border-radius: 9999px;
+    transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(197, 160, 89, 0.75);
+}
+
+/* Utility to cleanly hide scrollbar while preserving touch/mouse scroll */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar,
+.scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 /* ─── Lenis smooth scroll ────────────────────────────────────────────── */
 html.lenis,
 html.lenis body         { height: auto; }

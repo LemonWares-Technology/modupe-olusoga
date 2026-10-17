@@ -119,7 +119,7 @@
 {{-- ============================================================
      CREDENTIAL STRIP
      ============================================================ --}}
-<div class="credential-strip bg-brand-parchment overflow-x-auto">
+<div class="credential-strip bg-brand-parchment overflow-x-auto no-scrollbar">
     <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
         <div class="flex min-w-max md:min-w-0 md:flex-wrap">
             @foreach([
